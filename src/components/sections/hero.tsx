@@ -41,7 +41,7 @@ export default function HeroSection() {
     <section id="hero" className="relative w-full h-dvh min-h-[600px] flex items-center justify-center text-center overflow-hidden">
         <div className="absolute inset-0 bg-background/70 z-10"></div>
         <div className="container relative z-20 mx-auto flex flex-col items-center justify-center px-4 md:px-6 h-full">
-            <div className="max-w-4xl space-y-6">
+            <div className="max-w-4xl space-y-4">
                 <h1 className="font-headline text-5xl font-bold tracking-tighter sm:text-6xl md:text-7xl lg:text-8xl text-foreground min-h-[120px] sm:min-h-[140px] md:min-h-[160px] lg:min-h-[180px]">
                     {title}
                     <span className={`transition-opacity duration-500 ${showCursor || isTyping ? 'opacity-100' : 'opacity-0'}`}>|</span>
