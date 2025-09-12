@@ -4,6 +4,7 @@ import React from 'react';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Menu, X } from 'lucide-react';
+import { cn } from '@/lib/utils';
 
 const navLinks = [
   { name: 'Sobre', href: '#about' },
@@ -12,7 +13,11 @@ const navLinks = [
   { name: 'Projetos', href: '#projects' },
 ];
 
-export default function Header() {
+type HeaderProps = {
+  isTitleAnimationComplete: boolean;
+};
+
+export default function Header({ isTitleAnimationComplete }: HeaderProps) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false);
 
   const toggleMobileMenu = () => {
@@ -26,7 +31,10 @@ export default function Header() {
   return (
     <>
       <header
-        className={`fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[95%] max-w-xl transition-colors duration-300 bg-background/80 backdrop-blur-sm border border-border rounded-xl shadow-lg`}
+        className={cn(
+          'fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[95%] max-w-xl transition-all duration-1000 ease-in bg-background/80 backdrop-blur-sm border border-border rounded-xl shadow-lg',
+          isTitleAnimationComplete ? 'opacity-100' : 'opacity-0'
+        )}
       >
         <div className="container mx-auto flex h-16 items-center justify-between px-4 md:px-6">
           <Link href="#hero" className="font-headline text-lg font-bold mr-4">

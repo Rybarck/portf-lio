@@ -3,6 +3,7 @@
 import { Button } from '@/components/ui/button';
 import { ArrowDown } from 'lucide-react';
 import { useState, useEffect } from 'react';
+import { cn } from '@/lib/utils';
 
 const FULL_TITLE = 'João Pedro Rybarczyk';
 
@@ -33,10 +34,9 @@ export default function HeroSection({ onAnimationComplete }: HeroSectionProps) {
 
       timer = setTimeout(handleTyping, typingSpeed);
     } else {
-      // Blinking cursor effect
       timer = setInterval(() => {
         setShowCursor((prev) => !prev);
-      }, 500); // Slower blink interval
+      }, 500); 
     }
 
     return () => clearTimeout(timer);
@@ -51,19 +51,21 @@ export default function HeroSection({ onAnimationComplete }: HeroSectionProps) {
                     {title}
                     <span className={`transition-opacity duration-500 ${showCursor || isTyping ? 'opacity-100' : 'opacity-0'}`}>|</span>
                 </h1>
-                <p className="font-body text-lg text-accent md:text-xl font-medium">
-                    Estudante de Engenharia de Computação | Entusiasta de Tecnologia & Inovação
-                </p>
+                <div className={cn("transition-opacity duration-1000 ease-in", !isTyping ? "opacity-100" : "opacity-0")}>
+                  <p className="font-body text-lg text-accent md:text-xl font-medium">
+                      Estudante de Engenharia de Computação | Entusiasta de Tecnologia & Inovação
+                  </p>
 
-                <div className="flex justify-center pt-8">
-                    <Button size="lg" asChild className="bg-primary text-primary-foreground hover:bg-primary/90">
-                        <a href="#projects">
-                            Ver Projetos
-                        </a>
-                    </Button>
+                  <div className="flex justify-center pt-8">
+                      <Button size="lg" asChild className="bg-primary text-primary-foreground hover:bg-primary/90">
+                          <a href="#projects">
+                              Ver Projetos
+                          </a>
+                      </Button>
+                  </div>
                 </div>
             </div>
-             <div className="absolute bottom-10 z-20">
+             <div className={cn("absolute bottom-10 z-20 transition-opacity duration-1000 ease-in", !isTyping ? "opacity-100" : "opacity-0")}>
                 <a href="#about" aria-label="Scroll to about section">
                     <ArrowDown className="h-8 w-8 animate-bounce text-primary"/>
                 </a>
