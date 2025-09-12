@@ -15,15 +15,15 @@ const SectionDescription = ({ children }: { children: React.ReactNode }) => (
 );
 
 const AnimatedText = () => {
-  const phrases = ["crio coisas", "invento coisas", "mudo coisas"];
+  const phrases = ["crio coisas.", "invento coisas.", "mudo coisas."];
   const [phraseIndex, setPhraseIndex] = useState(0);
   const [text, setText] = useState('');
   const [isDeleting, setIsDeleting] = useState(false);
-  const [showCursor, setShowCursor] = useState(true);
 
   useEffect(() => {
     let timeout: NodeJS.Timeout;
     const currentPhrase = phrases[phraseIndex];
+    const baseText = 'Eu ';
 
     if (isDeleting) {
       if (text.length > 0) {
@@ -49,17 +49,10 @@ const AnimatedText = () => {
     return () => clearTimeout(timeout);
   }, [text, isDeleting, phraseIndex]);
 
-  useEffect(() => {
-    const cursorInterval = setInterval(() => {
-        setShowCursor(prev => !prev);
-    }, 500);
-    return () => clearInterval(cursorInterval);
-  }, [])
-
   return (
     <span className='font-mono'>
       Eu {text}
-      <span className={cn('transition-opacity duration-500', showCursor ? 'opacity-100' : 'opacity-0')}>|</span>
+      <span>|</span>
     </span>
   );
 };
