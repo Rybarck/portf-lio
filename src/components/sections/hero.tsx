@@ -1,14 +1,53 @@
+'use client';
+
 import { Button } from '@/components/ui/button';
 import { ArrowDown } from 'lucide-react';
+import { useState, useEffect } from 'react';
+
+const FULL_TITLE = 'João Pedro Rybarczyk';
 
 export default function HeroSection() {
+  const [title, setTitle] = useState('');
+  const [isDeleting, setIsDeleting] = useState(false);
+  const [loopNum, setLoopNum] = useState(0);
+  const [typingSpeed, setTypingSpeed] = useState(150);
+
+  useEffect(() => {
+    const handleTyping = () => {
+      const i = loopNum % 1; // Only one string
+      const fullText = FULL_TITLE;
+
+      setTitle(
+        isDeleting
+          ? fullText.substring(0, title.length - 1)
+          : fullText.substring(0, title.length + 1)
+      );
+
+      setTypingSpeed(isDeleting ? 30 : 150);
+
+      if (!isDeleting && title === fullText) {
+        // Stop after typing once
+        // To make it loop, you could remove the check and use something like:
+        // setTimeout(() => setIsDeleting(true), 5000);
+      } else if (isDeleting && title === '') {
+        setIsDeleting(false);
+        setLoopNum(loopNum + 1);
+      }
+    };
+
+    if (title !== FULL_TITLE) {
+       const timer = setTimeout(handleTyping, typingSpeed);
+       return () => clearTimeout(timer);
+    }
+  }, [title, isDeleting, typingSpeed, loopNum]);
+
   return (
     <section id="hero" className="relative w-full h-dvh min-h-[600px] flex items-center justify-center text-center overflow-hidden">
         <div className="absolute inset-0 bg-background/70 z-10"></div>
         <div className="container relative z-20 mx-auto flex flex-col items-center justify-center px-4 md:px-6 h-full">
             <div className="max-w-4xl space-y-6">
-                <h1 className="font-headline text-5xl font-bold tracking-tighter sm:text-6xl md:text-7xl lg:text-8xl text-foreground">
-                    João Pedro Rybarczyk
+                <h1 className="font-headline text-5xl font-bold tracking-tighter sm:text-6xl md:text-7xl lg:text-8xl text-foreground min-h-[120px] sm:min-h-[140px] md:min-h-[160px] lg:min-h-[180px]">
+                    {title}<span className="animate-pulse">|</span>
                 </h1>
                 <p className="font-body text-lg text-accent md:text-xl font-medium">
                     Estudante de Engenharia de Computação | Entusiasta de Tecnologia & Inovação
