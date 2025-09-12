@@ -22,13 +22,13 @@ const AnimatedText = () => {
   const [showCursor, setShowCursor] = useState(true);
 
   useEffect(() => {
-    const currentPhrase = phrases[phraseIndex];
     let timeout: NodeJS.Timeout;
+    const currentPhrase = phrases[phraseIndex];
 
     if (isDeleting) {
       if (text.length > 0) {
         timeout = setTimeout(() => {
-          setText(currentPhrase.substring(0, text.length - 1));
+          setText(prev => prev.slice(0, -1));
         }, 100);
       } else {
         setIsDeleting(false);
@@ -47,7 +47,7 @@ const AnimatedText = () => {
     }
 
     return () => clearTimeout(timeout);
-  }, [text, isDeleting, phraseIndex, phrases]);
+  }, [text, isDeleting, phraseIndex]);
 
   useEffect(() => {
     const cursorInterval = setInterval(() => {
@@ -58,7 +58,7 @@ const AnimatedText = () => {
 
   return (
     <span className='font-mono'>
-      eu {text}
+      Eu {text}
       <span className={cn('transition-opacity duration-500', showCursor ? 'opacity-100' : 'opacity-0')}>|</span>
     </span>
   );
