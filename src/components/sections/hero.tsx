@@ -7,12 +7,12 @@ export default function HeroSection() {
         <div className="absolute inset-0 bg-background/70 z-10"></div>
         <div className="container relative z-20 mx-auto flex flex-col items-center justify-center px-4 md:px-6 h-full">
             <div className="max-w-4xl space-y-6">
-                <p className="font-body text-lg text-accent md:text-xl font-medium">
-                    Estudante de Engenharia de Computação | Entusiasta de Tecnologia & Inovação
-                </p>
                 <h1 className="font-headline text-5xl font-bold tracking-tighter sm:text-6xl md:text-7xl lg:text-8xl text-foreground">
                     João Pedro Rybarczyk
                 </h1>
+                <p className="font-body text-lg text-accent md:text-xl font-medium">
+                    Estudante de Engenharia de Computação | Entusiasta de Tecnologia & Inovação
+                </p>
 
                 <div className="flex justify-center pt-4">
                     <Button size="lg" asChild className="bg-primary text-primary-foreground hover:bg-primary/90">
