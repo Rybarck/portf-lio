@@ -8,8 +8,6 @@ const FULL_TITLE = 'João Pedro Rybarczyk';
 
 export default function HeroSection() {
   const [title, setTitle] = useState('');
-  const [isDeleting, setIsDeleting] = useState(false);
-  const [loopNum, setLoopNum] = useState(0);
   const [typingSpeed, setTypingSpeed] = useState(150);
   const [showCursor, setShowCursor] = useState(true);
   const [isTyping, setIsTyping] = useState(true);
@@ -18,23 +16,22 @@ export default function HeroSection() {
     let timer: NodeJS.Timeout;
 
     if (isTyping) {
-        const handleTyping = () => {
-            const fullText = FULL_TITLE;
-            const newTitle = fullText.substring(0, title.length + 1);
-            setTitle(newTitle);
+      const handleTyping = () => {
+        const fullText = FULL_TITLE;
+        const newTitle = fullText.substring(0, title.length + 1);
+        setTitle(newTitle);
 
-            if (newTitle === fullText) {
-                setIsTyping(false);
-                setShowCursor(true);
-            }
-        };
+        if (newTitle === fullText) {
+          setIsTyping(false);
+        }
+      };
 
-        timer = setTimeout(handleTyping, typingSpeed);
+      timer = setTimeout(handleTyping, typingSpeed);
     } else {
-        // Blinking cursor effect
-        timer = setInterval(() => {
-            setShowCursor(prev => !prev);
-        }, 500);
+      // Blinking cursor effect
+      timer = setInterval(() => {
+        setShowCursor((prev) => !prev);
+      }, 500); // Slower blink interval
     }
 
     return () => clearTimeout(timer);
@@ -46,7 +43,8 @@ export default function HeroSection() {
         <div className="container relative z-20 mx-auto flex flex-col items-center justify-center px-4 md:px-6 h-full">
             <div className="max-w-4xl space-y-6">
                 <h1 className="font-headline text-5xl font-bold tracking-tighter sm:text-6xl md:text-7xl lg:text-8xl text-foreground min-h-[120px] sm:min-h-[140px] md:min-h-[160px] lg:min-h-[180px]">
-                    {title}<span>{showCursor && '|'}</span>
+                    {title}
+                    <span className={`transition-opacity duration-500 ${showCursor || isTyping ? 'opacity-100' : 'opacity-0'}`}>|</span>
                 </h1>
                 <p className="font-body text-lg text-accent md:text-xl font-medium">
                     Estudante de Engenharia de Computação | Entusiasta de Tecnologia & Inovação
