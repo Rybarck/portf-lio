@@ -13,16 +13,7 @@ const navLinks = [
 ];
 
 export default function Header() {
-  const [isScrolled, setIsScrolled] = React.useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false);
-
-  React.useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 10);
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
@@ -35,11 +26,9 @@ export default function Header() {
   return (
     <>
       <header
-        className={`sticky top-0 z-50 w-full transition-colors duration-300 ${
-          isScrolled || isMobileMenuOpen ? 'bg-background/95 backdrop-blur-sm border-b border-border' : 'bg-transparent'
-        }`}
+        className={`fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[95%] max-w-5xl transition-colors duration-300 bg-background/80 backdrop-blur-sm border border-border rounded-xl shadow-lg`}
       >
-        <div className="container mx-auto flex h-20 items-center justify-between px-4 md:px-6">
+        <div className="container mx-auto flex h-16 items-center justify-between px-4 md:px-6">
           <Link href="#hero" className="font-headline text-lg font-bold transition-colors hover:text-primary">
             JPR
           </Link>
@@ -68,8 +57,8 @@ export default function Header() {
         </div>
       </header>
       {isMobileMenuOpen && (
-        <div className="fixed inset-0 top-20 z-40 bg-background/95 backdrop-blur-sm md:hidden" onClick={closeMobileMenu}>
-           <nav className="flex flex-col items-center justify-center h-full gap-8">
+        <div className="fixed inset-0 top-0 z-40 bg-background/95 backdrop-blur-sm md:hidden" onClick={closeMobileMenu}>
+           <nav className="flex flex-col items-center justify-center h-full gap-8 pt-16">
             {navLinks.map((link) => (
               <a
                 key={link.name}
