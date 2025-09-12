@@ -19,7 +19,7 @@ export default function Home() {
       <Header isTitleAnimationComplete={isTitleAnimationComplete} />
       <main className="flex-1">
         <HeroSection onAnimationComplete={() => setIsTitleAnimationComplete(true)} />
-        <div className={cn('transition-opacity duration-1000 ease-in', isTitleAnimationComplete ? 'opacity-100' : 'opacity-0')}>
+        <div className={cn('transition-opacity duration-[2000ms] ease-in', isTitleAnimationComplete ? 'opacity-100' : 'opacity-0')}>
             <AboutSection />
             <SkillsSection />
             <ExperienceSection />
@@ -27,7 +27,7 @@ export default function Home() {
             <ContactSection />
         </div>
       </main>
-      <div className={cn('transition-opacity duration-1000 ease-in', isTitleAnimationComplete ? 'opacity-100' : 'opacity-0')}>
+      <div className={cn('transition-opacity duration-[2000ms] ease-in', isTitleAnimationComplete ? 'opacity-100' : 'opacity-0')}>
         <Footer />
       </div>
     </div>

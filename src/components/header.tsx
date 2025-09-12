@@ -32,7 +32,7 @@ export default function Header({ isTitleAnimationComplete }: HeaderProps) {
     <>
       <header
         className={cn(
-          'fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[95%] max-w-xl transition-all duration-1000 ease-in bg-background/80 backdrop-blur-sm border border-border rounded-xl shadow-lg',
+          'fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[95%] max-w-xl transition-opacity duration-[2000ms] ease-in bg-background/80 backdrop-blur-sm border border-border rounded-xl shadow-lg',
           isTitleAnimationComplete ? 'opacity-100' : 'opacity-0'
         )}
       >

@@ -52,8 +52,8 @@ export default function HeroSection({ onAnimationComplete }: HeroSectionProps) {
                     {title}
                     <span className={`transition-opacity duration-500 ${showCursor || isTyping ? 'opacity-100' : 'opacity-0'}`}>|</span>
                 </h1>
-                <div className={cn("transition-opacity duration-1000 ease-in", !isTyping ? "opacity-100" : "opacity-0")}>
-                  <p className="font-body text-lg text-accent md:text-xl font-medium mt-2">
+                <div className={cn("transition-opacity duration-[2000ms] ease-in", !isTyping ? "opacity-100" : "opacity-0")}>
+                  <p className="font-body text-lg text-accent md:text-xl font-medium mt-1">
                       Estudante de Engenharia de Computação | Entusiasta de Tecnologia & Inovação
                   </p>
 
@@ -66,7 +66,7 @@ export default function HeroSection({ onAnimationComplete }: HeroSectionProps) {
                   </div>
                 </div>
             </div>
-             <div className={cn("absolute bottom-10 z-20 transition-opacity duration-1000 ease-in", !isTyping ? "opacity-100" : "opacity-0")}>
+             <div className={cn("absolute bottom-10 z-20 transition-opacity duration-[2000ms] ease-in", !isTyping ? "opacity-100" : "opacity-0")}>
                 <a href="#about" aria-label="Scroll to about section">
                     <ArrowDown className="h-8 w-8 animate-bounce text-primary"/>
                 </a>
