@@ -34,6 +34,7 @@ export default function HeroSection({ onAnimationComplete }: HeroSectionProps) {
 
       timer = setTimeout(handleTyping, typingSpeed);
     } else {
+      // Blinking cursor after typing is done
       timer = setInterval(() => {
         setShowCursor((prev) => !prev);
       }, 500); 
@@ -47,12 +48,12 @@ export default function HeroSection({ onAnimationComplete }: HeroSectionProps) {
         <div className="absolute inset-0 bg-background/70 z-10"></div>
         <div className="container relative z-20 mx-auto flex flex-col items-center justify-center px-4 md:px-6 h-full">
             <div className="max-w-4xl">
-                <h1 className="font-headline text-5xl font-bold tracking-tighter sm:text-6xl md:text-7xl lg:text-8xl text-foreground min-h-[120px] sm:min-h-[140px] md:min-h-[160px] lg:min-h-[180px] mb-2">
+                <h1 className="font-headline text-5xl font-bold tracking-tighter sm:text-6xl md:text-7xl lg:text-8xl text-foreground min-h-[120px] sm:min-h-[140px] md:min-h-[160px] lg:min-h-[180px]">
                     {title}
                     <span className={`transition-opacity duration-500 ${showCursor || isTyping ? 'opacity-100' : 'opacity-0'}`}>|</span>
                 </h1>
                 <div className={cn("transition-opacity duration-1000 ease-in", !isTyping ? "opacity-100" : "opacity-0")}>
-                  <p className="font-body text-lg text-accent md:text-xl font-medium">
+                  <p className="font-body text-lg text-accent md:text-xl font-medium mt-2">
                       Estudante de Engenharia de Computação | Entusiasta de Tecnologia & Inovação
                   </p>
 
