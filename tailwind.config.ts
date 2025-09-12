@@ -17,7 +17,7 @@ export default {
     },
     extend: {
       fontFamily: {
-        body: ['Inter', 'sans-serif'],
+        body: ['"Roboto Mono"', 'monospace'],
         headline: ['"Space Grotesk"', 'sans-serif'],
         code: ['monospace'],
       },
