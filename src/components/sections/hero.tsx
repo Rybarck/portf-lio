@@ -28,17 +28,12 @@ export default function HeroSection({ onAnimationComplete }: HeroSectionProps) {
 
         if (newTitle === fullText) {
           setIsTyping(false);
+          setShowCursor(false);
           onAnimationComplete();
         }
       };
 
       timer = setTimeout(handleTyping, typingSpeed);
-    } else {
-      // Blinking cursor after typing is done
-      const blinkTimer = setInterval(() => {
-        setShowCursor((prev) => !prev);
-      }, 500);
-      return () => clearInterval(blinkTimer);
     }
 
     return () => clearTimeout(timer);
@@ -53,8 +48,8 @@ export default function HeroSection({ onAnimationComplete }: HeroSectionProps) {
                     {title}
                     <span className={cn("transition-opacity duration-500", (showCursor || isTyping) ? 'opacity-100' : 'opacity-0')}>|</span>
                 </h1>
-                <div className={cn("transition-opacity duration-[2000ms] ease-in", !isTyping ? "opacity-100" : "opacity-0")}>
-                  <p className="font-body text-lg text-foreground md:text-xl mt-6">
+                <div className={cn("transition-opacity duration-[2000ms] ease-in mt-2", !isTyping ? "opacity-100" : "opacity-0")}>
+                  <p className="font-body text-lg text-white md:text-xl font-light">
                       Estudante de Engenharia de Computação | Entusiasta de Tecnologia & Inovação
                   </p>
 
