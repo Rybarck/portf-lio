@@ -4,10 +4,9 @@ import { useState, useEffect } from 'react';
 import SectionWrapper from '@/components/section-wrapper';
 import Image from 'next/image';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
-import { cn } from '@/lib/utils';
 
 const SectionTitle = ({ children }: { children: React.ReactNode }) => (
-    <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-primary">{children}</h2>
+    <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl text-primary">{children}</h2>
 );
 
 const SectionDescription = ({ children }: { children: React.ReactNode }) => (
@@ -23,8 +22,7 @@ const AnimatedText = () => {
   useEffect(() => {
     let timeout: NodeJS.Timeout;
     const currentPhrase = phrases[phraseIndex];
-    const baseText = 'Eu ';
-
+    
     if (isDeleting) {
       if (text.length > 0) {
         timeout = setTimeout(() => {
@@ -76,9 +74,11 @@ export default function AboutSection() {
             />
            )}
         </div>
-        <div className="space-y-4 text-center lg:text-left">
+        <div className="grid gap-8 md:grid-cols-[1fr_2fr] items-start text-center lg:text-left">
           <div className="space-y-4">
             <SectionTitle>Sobre Mim</SectionTitle>
+          </div>
+          <div className="space-y-4">
             <SectionDescription>
                 <AnimatedText />
             </SectionDescription>
