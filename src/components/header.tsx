@@ -37,7 +37,7 @@ export default function Header() {
               <a
                 key={link.name}
                 href={link.href}
-                className="relative text-sm font-medium transition-colors hover:text-primary after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-primary after:transition-all after:duration-300 hover:after:w-full"
+                className="relative text-sm font-medium after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-primary after:transition-all after:duration-300 hover:after:w-full"
               >
                 {link.name}
               </a>
@@ -64,7 +64,7 @@ export default function Header() {
                 key={link.name}
                 href={link.href}
                 onClick={closeMobileMenu}
-                className="relative text-2xl font-medium transition-colors hover:text-primary after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-primary after:transition-all after:duration-300 hover:after:w-full"
+                className="relative text-2xl font-medium after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-primary after:transition-all after:duration-300 hover:after:w-full"
               >
                 {link.name}
               </a>
