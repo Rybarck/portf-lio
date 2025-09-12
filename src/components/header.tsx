@@ -26,7 +26,7 @@ export default function Header() {
   return (
     <>
       <header
-        className={`fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[95%] max-w-4xl transition-colors duration-300 bg-background/80 backdrop-blur-sm border border-border rounded-xl shadow-lg`}
+        className={`fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[95%] max-w-xl transition-colors duration-300 bg-background/80 backdrop-blur-sm border border-border rounded-xl shadow-lg`}
       >
         <div className="container mx-auto flex h-16 items-center justify-between px-4 md:px-6">
           <Link href="#hero" className="font-headline text-lg font-bold">
