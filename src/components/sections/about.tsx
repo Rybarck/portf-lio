@@ -61,26 +61,12 @@ export default function AboutSection() {
 
   return (
     <SectionWrapper id="about" className="bg-secondary">
-      <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-24">
-        <div className="flex justify-center order-last lg:order-first">
-           {placeholder && (
-            <Image 
-                src={placeholder.imageUrl}
-                alt={placeholder.description}
-                width={400}
-                height={400}
-                className="rounded-full object-cover border-4 border-primary shadow-lg"
-                data-ai-hint={placeholder.imageHint}
-            />
-           )}
-        </div>
-        <div className="grid gap-8 md:grid-cols-[1fr_2fr] items-start text-center lg:text-left">
-          <div className="space-y-4">
-            <SectionTitle>Sobre Mim</SectionTitle>
-          </div>
-          <div className="space-y-4">
+      <div className="grid items-center gap-12 lg:gap-24">
+        <div className="space-y-4 text-center">
+          <SectionTitle>Sobre Mim</SectionTitle>
+          <div className="space-y-4 max-w-3xl mx-auto">
             <SectionDescription>
-                <AnimatedText />
+              <AnimatedText />
             </SectionDescription>
             <SectionDescription>
               Sou um estudante de Engenharia de Computação na UERGS, com conclusão prevista para 2029. Sou apaixonado por tecnologia, resolução de problemas e inovação. Busco constantemente aprender e aplicar novos conhecimentos para criar soluções criativas e eficientes.
