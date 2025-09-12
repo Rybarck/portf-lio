@@ -6,7 +6,11 @@ import { useState, useEffect } from 'react';
 
 const FULL_TITLE = 'João Pedro Rybarczyk';
 
-export default function HeroSection() {
+type HeroSectionProps = {
+  onAnimationComplete: () => void;
+};
+
+export default function HeroSection({ onAnimationComplete }: HeroSectionProps) {
   const [title, setTitle] = useState('');
   const [typingSpeed, setTypingSpeed] = useState(150);
   const [showCursor, setShowCursor] = useState(true);
@@ -23,6 +27,7 @@ export default function HeroSection() {
 
         if (newTitle === fullText) {
           setIsTyping(false);
+          onAnimationComplete();
         }
       };
 
@@ -35,7 +40,7 @@ export default function HeroSection() {
     }
 
     return () => clearTimeout(timer);
-  }, [title, isTyping, typingSpeed]);
+  }, [title, isTyping, typingSpeed, onAnimationComplete]);
 
   return (
     <section id="hero" className="relative w-full h-dvh min-h-[600px] flex items-center justify-center text-center overflow-hidden">
