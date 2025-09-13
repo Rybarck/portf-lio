@@ -13,7 +13,7 @@ const SectionDescription = ({ children }: { children: React.ReactNode }) => (
 
 export default function ExperienceSection() {
   return (
-    <SectionWrapper id="experience" className="bg-secondary">
+    <SectionWrapper id="experience" className="bg-background">
       <div className="flex flex-col items-center justify-center space-y-4 text-center">
         <div className="space-y-2">
           <SectionTitle>Experience and Courses</SectionTitle>
@@ -22,7 +22,7 @@ export default function ExperienceSection() {
       </div>
       <div className="mx-auto grid max-w-4xl gap-8 py-12 lg:grid-cols-1">
         {EXPERIENCES.map((exp, index) => (
-          <Card key={index} className="transition-all hover:shadow-lg hover:shadow-primary/20 bg-background">
+          <Card key={index} className="transition-all hover:shadow-lg hover:shadow-primary/20 bg-secondary">
             <CardHeader>
               <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
                 <CardTitle className="text-xl">{exp.title}</CardTitle>

@@ -14,7 +14,7 @@ const SectionDescription = ({ children }: { children: React.ReactNode }) => (
 
 export default function ContactSection() {
   return (
-    <SectionWrapper id="contact" className="bg-secondary">
+    <SectionWrapper id="contact" className="bg-background">
       <div className="flex flex-col items-center justify-center space-y-4 text-center">
         <div className="space-y-2">
           <SectionTitle>Contact</SectionTitle>
@@ -25,7 +25,7 @@ export default function ContactSection() {
       </div>
       <div className="mx-auto mt-12 max-w-xl">
         <div className="space-y-8">
-          <Card className="bg-background p-6 md:p-8">
+          <Card className="bg-secondary p-6 md:p-8">
             <ContactForm />
           </Card>
           <div className="flex flex-col items-center space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4">
