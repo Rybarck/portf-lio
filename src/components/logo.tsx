@@ -16,8 +16,11 @@ export default function Logo({ className }: LogoProps) {
       strokeLinejoin="round"
       className={cn('h-6 w-6 text-primary', className)}
     >
-      <path d="M12 2v14a4 4 0 0 0 4 4h0a4 4 0 0 0 4-4" />
-      <path d="M8 2h8" />
+      <path d="M16 2v12a4 4 0 0 1-4 4H8" />
+      <path d="M8 2v4" />
+      <path d="M12 2v4" />
+      <path d="M16 8v4" />
+      <path d="M12 14v4" />
     </svg>
   );
 }
