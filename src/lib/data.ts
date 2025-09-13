@@ -6,8 +6,6 @@ export const SKILLS = [
   { name: 'CSS', icon: Palette },
   { name: 'AI Automation (n8n)', icon: Bot },
   { name: 'Firebase & Firestore', icon: Database },
-  { name: 'Node.js & Express', icon: Server },
-  { name: 'MongoDB', icon: Database },
   { name: 'Advanced English', icon: Languages },
 ];
 
