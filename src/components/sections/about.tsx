@@ -12,7 +12,7 @@ const SectionDescription = ({ children }: { children: React.ReactNode }) => (
 
 export default function AboutSection() {
   return (
-    <SectionWrapper id="about" className="bg-background">
+    <SectionWrapper id="about" className="bg-background dark:bg-black">
       <div className="grid items-center gap-12 lg:gap-24">
         <div className="space-y-4 text-center">
           <SectionTitle>About Me</SectionTitle>

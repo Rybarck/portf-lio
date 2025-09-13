@@ -16,7 +16,7 @@ const SectionDescription = ({ children }: { children: React.ReactNode }) => (
 
 export default function ProjectsSection() {
   return (
-    <SectionWrapper id="projects" className="bg-background">
+    <SectionWrapper id="projects" className="bg-background dark:bg-black">
       <div className="flex flex-col items-center justify-center space-y-4 text-center">
         <div className="space-y-2">
           <SectionTitle>Projects</SectionTitle>

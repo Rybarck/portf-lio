@@ -13,7 +13,7 @@ const SectionDescription = ({ children }: { children: React.ReactNode }) => (
 
 export default function ExperienceSection() {
   return (
-    <SectionWrapper id="experience" className="bg-background">
+    <SectionWrapper id="experience" className="bg-background dark:bg-black">
       <div className="flex flex-col items-center justify-center space-y-4 text-center">
         <div className="space-y-2">
           <SectionTitle>Experience and Courses</SectionTitle>
