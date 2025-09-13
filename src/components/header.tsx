@@ -39,7 +39,7 @@ export default function Header({ isTitleAnimationComplete }: HeaderProps) {
       >
         <div className="container mx-auto flex h-16 items-center justify-between px-4 md:px-6">
           <Link href="#hero" className="font-headline text-lg font-bold mr-4">
-            JPR
+            J
           </Link>
           <nav className="hidden items-center gap-6 md:flex">
             {navLinks.map((link) => (
