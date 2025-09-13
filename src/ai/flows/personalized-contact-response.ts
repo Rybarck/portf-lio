@@ -15,7 +15,6 @@ const PersonalizedContactResponseInputSchema = z.object({
   userName: z.string().describe('The name of the user submitting the contact form.'),
   userEmail: z.string().email().describe('The email address of the user.'),
   userMessage: z.string().describe('The message submitted by the user through the contact form.'),
-  joaoSkills: z.array(z.string()).describe("João's technical skills."),
   joaoProjects: z.array(z.string()).describe("João's project descriptions."),
 });
 
@@ -41,7 +40,6 @@ User's Name: {{userName}}
 User's Email: {{userEmail}}
 User's Message: {{userMessage}}
 
-Your Skills: {{joaoSkills}}
 Your Projects: {{joaoProjects}}
 
 Consider the user's message and João's skills and projects to determine if suggesting personalized project ideas or collaborations would be appropriate. If the user expresses interest in a specific technology or area that aligns with João's expertise, propose relevant project ideas or collaboration opportunities. Ensure the response is friendly, professional, and tailored to the user's message.

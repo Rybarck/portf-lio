@@ -1,14 +1,3 @@
-import { Code, Server, Palette, Bot, Database, Languages } from 'lucide-react';
-
-export const SKILLS = [
-  { name: 'JavaScript', icon: Code },
-  { name: 'HTML', icon: Code },
-  { name: 'CSS', icon: Palette },
-  { name: 'AI Automation (n8n)', icon: Bot },
-  { name: 'Firebase & Firestore', icon: Database },
-  { name: 'Advanced English', icon: Languages },
-];
-
 export const EXPERIENCES = [
   {
     title: 'CS50: Introduction to Computer Science',

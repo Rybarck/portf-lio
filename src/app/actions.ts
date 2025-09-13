@@ -2,7 +2,7 @@
 
 import { z } from 'zod';
 import { personalizedContactResponse } from '@/ai/flows/personalized-contact-response';
-import { SKILLS, PROJECTS } from '@/lib/data';
+import { PROJECTS } from '@/lib/data';
 
 const formSchema = z.object({
   name: z.string(),
@@ -30,7 +30,6 @@ export async function handleContactFormSubmission(values: z.infer<typeof formSch
       userName: parsed.data.name,
       userEmail: parsed.data.email,
       userMessage: parsed.data.message,
-      joaoSkills: SKILLS.map(skill => skill.name),
       joaoProjects: PROJECTS.map(project => `${project.title}: ${project.description}`),
     };
 
