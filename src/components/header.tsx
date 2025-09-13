@@ -6,6 +6,7 @@ import { Button } from '@/components/ui/button';
 import { Menu, X } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import ThemeToggle from '@/components/theme-toggle';
+import Logo from './logo';
 
 const navLinks = [
   { name: 'About', href: '#about' },
@@ -38,8 +39,8 @@ export default function Header({ isTitleAnimationComplete }: HeaderProps) {
         )}
       >
         <div className="container mx-auto flex h-16 items-center justify-between px-4 md:px-6">
-          <Link href="#hero" className="font-headline text-lg font-bold mr-4">
-            J
+          <Link href="#hero" className="mr-4">
+            <Logo />
           </Link>
           <nav className="hidden items-center gap-6 md:flex">
             {navLinks.map((link) => (
