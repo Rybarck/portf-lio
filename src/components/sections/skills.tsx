@@ -11,7 +11,7 @@ export default function SkillsSection() {
     <SectionWrapper id="skills" className="bg-background">
       <div className="flex flex-col items-center justify-center space-y-4 text-center">
         <div className="space-y-2">
-          <SectionTitle>Habilidades Técnicas</SectionTitle>
+          <SectionTitle>Technical Skills</SectionTitle>
         </div>
       </div>
       <div className="mx-auto grid max-w-5xl grid-cols-2 gap-4 py-12 sm:grid-cols-3 md:grid-cols-4">

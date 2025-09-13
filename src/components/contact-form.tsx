@@ -20,9 +20,9 @@ import { handleContactFormSubmission } from '@/app/actions';
 import { Loader2 } from 'lucide-react';
 
 const formSchema = z.object({
-  name: z.string().min(2, 'O nome deve ter pelo menos 2 caracteres.'),
-  email: z.string().email('Por favor, insira um email válido.'),
-  message: z.string().min(10, 'A mensagem deve ter pelo menos 10 caracteres.'),
+  name: z.string().min(2, 'Name must be at least 2 characters.'),
+  email: z.string().email('Please enter a valid email.'),
+  message: z.string().min(10, 'Message must be at least 10 characters.'),
 });
 
 export default function ContactForm() {
@@ -43,14 +43,14 @@ export default function ContactForm() {
       const result = await handleContactFormSubmission(values);
       if (result.success) {
         toast({
-          title: 'Mensagem Enviada!',
+          title: 'Message Sent!',
           description: result.message,
         });
         form.reset();
       } else {
         toast({
           variant: 'destructive',
-          title: 'Erro ao enviar mensagem',
+          title: 'Error sending message',
           description: result.message,
         });
       }
@@ -65,9 +65,9 @@ export default function ContactForm() {
           name="name"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Nome</FormLabel>
+              <FormLabel>Name</FormLabel>
               <FormControl>
-                <Input placeholder="Seu nome" {...field} />
+                <Input placeholder="Your name" {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -80,7 +80,7 @@ export default function ContactForm() {
             <FormItem>
               <FormLabel>Email</FormLabel>
               <FormControl>
-                <Input type="email" placeholder="seu@email.com" {...field} />
+                <Input type="email" placeholder="your@email.com" {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -91,9 +91,9 @@ export default function ContactForm() {
           name="message"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Mensagem</FormLabel>
+              <FormLabel>Message</FormLabel>
               <FormControl>
-                <Textarea placeholder="Sua mensagem..." {...field} className="min-h-[120px]" />
+                <Textarea placeholder="Your message..." {...field} className="min-h-[120px]" />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -101,7 +101,7 @@ export default function ContactForm() {
         />
         <Button type="submit" className="w-full" disabled={isPending}>
           {isPending && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
-          {isPending ? 'Enviando...' : 'Enviar Mensagem'}
+          {isPending ? 'Sending...' : 'Send Message'}
         </Button>
       </form>
     </Form>

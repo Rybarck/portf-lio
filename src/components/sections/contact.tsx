@@ -17,9 +17,9 @@ export default function ContactSection() {
     <SectionWrapper id="contact" className="bg-secondary">
       <div className="flex flex-col items-center justify-center space-y-4 text-center">
         <div className="space-y-2">
-          <SectionTitle>Contato</SectionTitle>
+          <SectionTitle>Contact</SectionTitle>
           <SectionDescription>
-            Vamos conversar! Envie uma mensagem ou entre em contato pelos links abaixo.
+            Let's talk! Send me a message or get in touch through the links below.
           </SectionDescription>
         </div>
       </div>

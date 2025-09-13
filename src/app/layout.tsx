@@ -4,8 +4,8 @@ import { Toaster } from '@/components/ui/toaster';
 import { ThemeProvider } from '@/components/theme-provider';
 
 export const metadata: Metadata = {
-  title: 'Portfólio de João Pedro Rybarczyk',
-  description: 'Portfólio de um estudante de Engenharia de Computação, entusiasta de tecnologia e inovação.',
+  title: "João Pedro Rybarczyk's Portfolio",
+  description: 'Portfolio of a Computer Engineering student, technology and innovation enthusiast.',
 };
 
 export default function RootLayout({
@@ -14,7 +14,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="pt-BR" suppressHydrationWarning>
+    <html lang="en" suppressHydrationWarning>
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />

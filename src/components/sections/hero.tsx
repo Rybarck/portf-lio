@@ -87,7 +87,7 @@ export default function HeroSection({ onAnimationComplete }: HeroSectionProps) {
             <div className="flex justify-center pt-8">
               <Button size="lg" asChild className="bg-primary text-primary-foreground hover:bg-primary/90">
                 <a href="#projects">
-                  Ver Projetos
+                  View Projects
                 </a>
               </Button>
             </div>

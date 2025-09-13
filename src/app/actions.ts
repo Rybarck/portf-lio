@@ -21,7 +21,7 @@ export async function handleContactFormSubmission(values: z.infer<typeof formSch
   if (!parsed.success) {
     return {
       success: false,
-      message: 'Dados do formulário inválidos.',
+      message: 'Invalid form data.',
     };
   }
   
@@ -42,13 +42,13 @@ export async function handleContactFormSubmission(values: z.infer<typeof formSch
 
     return {
       success: true,
-      message: "Obrigado pelo seu contato! Sua mensagem foi recebida com sucesso.",
+      message: "Thanks for your contact! Your message has been successfully received.",
     };
   } catch (error) {
     console.error('Error handling form submission:', error);
     return {
       success: false,
-      message: 'Houve um problema ao processar sua solicitação. Por favor, tente novamente mais tarde.',
+      message: 'There was a problem processing your request. Please try again later.',
     };
   }
 }

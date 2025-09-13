@@ -19,9 +19,9 @@ export default function ProjectsSection() {
     <SectionWrapper id="projects" className="bg-background">
       <div className="flex flex-col items-center justify-center space-y-4 text-center">
         <div className="space-y-2">
-          <SectionTitle>Projetos</SectionTitle>
+          <SectionTitle>Projects</SectionTitle>
           <SectionDescription>
-            Uma seleção de projetos que demonstram minhas habilidades e interesses.
+            A selection of projects that demonstrate my skills and interests.
           </SectionDescription>
         </div>
       </div>

@@ -16,8 +16,8 @@ export default function ExperienceSection() {
     <SectionWrapper id="experience" className="bg-secondary">
       <div className="flex flex-col items-center justify-center space-y-4 text-center">
         <div className="space-y-2">
-          <SectionTitle>Experiências e Cursos</SectionTitle>
-          <SectionDescription>Minha jornada de aprendizado e desenvolvimento profissional.</SectionDescription>
+          <SectionTitle>Experience and Courses</SectionTitle>
+          <SectionDescription>My journey of learning and professional development.</SectionDescription>
         </div>
       </div>
       <div className="mx-auto grid max-w-4xl gap-8 py-12 lg:grid-cols-1">
@@ -26,7 +26,7 @@ export default function ExperienceSection() {
             <CardHeader>
               <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
                 <CardTitle className="text-xl">{exp.title}</CardTitle>
-                <Badge variant={exp.status === 'Concluído' ? 'default' : 'secondary'} className={`${exp.status === 'Concluído' ? 'bg-primary' : 'bg-accent/20 text-accent-foreground'} self-start sm:self-center`}>{exp.status}</Badge>
+                <Badge variant={exp.status === 'Completed' ? 'default' : 'secondary'} className={`${exp.status === 'Completed' ? 'bg-primary' : 'bg-accent/20 text-accent-foreground'} self-start sm:self-center`}>{exp.status}</Badge>
               </div>
               <CardDescription>{exp.institution}</CardDescription>
             </CardHeader>

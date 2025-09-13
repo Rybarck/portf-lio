@@ -8,10 +8,10 @@ import { cn } from '@/lib/utils';
 import ThemeToggle from '@/components/theme-toggle';
 
 const navLinks = [
-  { name: 'Sobre', href: '#about' },
-  { name: 'Habilidades', href: '#skills' },
-  { name: 'Experiências', href: '#experience' },
-  { name: 'Projetos', href: '#projects' },
+  { name: 'About', href: '#about' },
+  { name: 'Skills', href: '#skills' },
+  { name: 'Experience', href: '#experience' },
+  { name: 'Projects', href: '#projects' },
 ];
 
 type HeaderProps = {
@@ -53,7 +53,7 @@ export default function Header({ isTitleAnimationComplete }: HeaderProps) {
             ))}
             <Button asChild variant="outline" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground">
               <a href="#contact">
-                Contato
+                Contact
               </a>
             </Button>
             <ThemeToggle />
@@ -82,7 +82,7 @@ export default function Header({ isTitleAnimationComplete }: HeaderProps) {
             ))}
             <Button asChild size="lg" onClick={closeMobileMenu}>
               <a href="#contact">
-                Contato
+                Contact
               </a>
             </Button>
           </nav>
