@@ -28,20 +28,4 @@ export const PROJECTS = [
     image: '1',
     link: '#',
   },
-  {
-    id: 'project-2',
-    title: 'AI Workflow Automation',
-    description: 'I developed several workflow automations using n8n and other AI tools to optimize personal and academic tasks, improving efficiency by over 50%.',
-    tech: ['n8n', 'OpenAI', 'APIs'],
-    image: '2',
-    link: '#',
-  },
-  {
-    id: 'project-3',
-    title: 'Full-Stack E-commerce API',
-    description: 'A robust RESTful API for a conceptual e-commerce platform, built with Node.js, Express, and MongoDB, with product, user, and order management.',
-    tech: ['Node.js', 'Express', 'MongoDB', 'JWT'],
-    image: '3',
-    link: '#',
-  },
 ];
