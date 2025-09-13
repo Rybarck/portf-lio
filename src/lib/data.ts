@@ -2,7 +2,7 @@ export const EXPERIENCES = [
   {
     title: 'CS50: Introduction to Computer Science',
     institution: 'Harvard University',
-    status: 'In Progress',
+    status: 'Completed',
     description: 'A fundamental course in computer science and the art of programming.',
   },
   {
