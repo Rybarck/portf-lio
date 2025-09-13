@@ -1,7 +1,6 @@
 'use client';
 
 import { Button } from '@/components/ui/button';
-import { ArrowDown } from 'lucide-react';
 import { useState, useEffect } from 'react';
 import { cn } from '@/lib/utils';
 
@@ -92,11 +91,6 @@ export default function HeroSection({ onAnimationComplete }: HeroSectionProps) {
               </Button>
             </div>
           </div>
-        </div>
-        <div className={cn("absolute bottom-10 z-20 transition-opacity duration-[2000ms] ease-in", !isTitleTyping ? "opacity-100" : "opacity-0")}>
-          <a href="#about" aria-label="Scroll to about section">
-            <ArrowDown className="h-8 w-8 animate-bounce text-primary" />
-          </a>
         </div>
       </div>
     </section>
