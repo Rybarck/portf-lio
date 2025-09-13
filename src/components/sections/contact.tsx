@@ -1,6 +1,6 @@
 import SectionWrapper from '@/components/section-wrapper';
 import ContactForm from '@/components/contact-form';
-import { Mail, MessageCircle } from 'lucide-react';
+import { Mail } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 
@@ -33,12 +33,6 @@ export default function ContactSection() {
                 <a href="mailto:joaopedro.ry@gmail.com">
                     <Mail className="mr-2 h-4 w-4" />
                     Email
-                </a>
-            </Button>
-            <Button variant="outline" asChild>
-                <a href="https://wa.me/5551998555543" target="_blank" rel="noopener noreferrer">
-                    <MessageCircle className="mr-2 h-4 w-4" />
-                    WhatsApp
                 </a>
             </Button>
           </div>
