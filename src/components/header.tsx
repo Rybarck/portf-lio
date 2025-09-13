@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Menu, X } from 'lucide-react';
 import { cn } from '@/lib/utils';
+import ThemeToggle from '@/components/theme-toggle';
 
 const navLinks = [
   { name: 'Sobre', href: '#about' },
@@ -55,8 +56,10 @@ export default function Header({ isTitleAnimationComplete }: HeaderProps) {
                 Contato
               </a>
             </Button>
+            <ThemeToggle />
           </nav>
-          <div className="md:hidden">
+          <div className="md:hidden flex items-center gap-2">
+             <ThemeToggle />
             <Button onClick={toggleMobileMenu} variant="ghost" size="icon">
               {isMobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
               <span className="sr-only">Toggle menu</span>
