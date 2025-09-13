@@ -25,11 +25,11 @@ export default function ProjectsSection() {
           </SectionDescription>
         </div>
       </div>
-      <div className="mx-auto grid gap-8 py-12 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+      <div className="mx-auto flex justify-center gap-8 py-12">
         {PROJECTS.map((project) => {
           const placeholder = PlaceHolderImages.find(p => p.id === project.image);
           return (
-            <Card key={project.id} className="group overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-primary/20 bg-secondary border-border hover:border-primary">
+            <Card key={project.id} className="group overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-primary/20 bg-secondary border-border hover:border-primary max-w-sm">
               <a href={project.link} target="_blank" rel="noopener noreferrer" className="block h-full">
                 <div className="flex flex-col h-full">
                   <CardHeader className="p-0 relative">
