@@ -48,7 +48,7 @@ export default function HeroSection({ onAnimationComplete }: HeroSectionProps) {
                     {title}
                     <span className={cn("transition-opacity duration-500", (showCursor || isTyping) ? 'opacity-100' : 'opacity-0')}>|</span>
                 </h1>
-                <div className={cn("transition-opacity duration-[2000ms] ease-in mt-2", !isTyping ? "opacity-100" : "opacity-0")}>
+                <div className={cn("transition-opacity duration-[2000ms] ease-in mt-6", !isTyping ? "opacity-100" : "opacity-0")}>
                   <p className="font-body text-lg text-white md:text-xl font-light">
                       Estudante de Engenharia de Computação | Entusiasta de Tecnologia & Inovação
                   </p>
