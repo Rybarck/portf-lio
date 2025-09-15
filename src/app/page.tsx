@@ -9,6 +9,7 @@ import ProjectsSection from '@/components/sections/projects';
 import ContactSection from '@/components/sections/contact';
 import Footer from '@/components/footer';
 import { cn } from '@/lib/utils';
+import SkillsSection from '@/components/sections/skills';
 
 export default function Home() {
   const [isTitleAnimationComplete, setIsTitleAnimationComplete] = useState(false);
@@ -21,6 +22,7 @@ export default function Home() {
         <div className={cn('transition-opacity duration-[2000ms] ease-in', isTitleAnimationComplete ? 'opacity-100' : 'opacity-0')}>
             <AboutSection />
             <ExperienceSection />
+            <SkillsSection />
             <ProjectsSection />
             <ContactSection />
         </div>

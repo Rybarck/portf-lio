@@ -29,3 +29,30 @@ export const PROJECTS = [
     link: '#',
   },
 ];
+
+export const SKILLS = [
+  {
+    title: 'AI Automation',
+    icon: 'Bot',
+  },
+  {
+    title: 'UI & UX',
+    icon: 'PenTool',
+  },
+  {
+    title: 'Firestore and Firebase',
+    icon: 'Database',
+  },
+  {
+    title: 'OpenAI API',
+    icon: 'BrainCircuit',
+  },
+  {
+    title: 'Gemini API',
+    icon: 'BrainCircuit',
+  },
+  {
+    title: 'Vibe Code',
+    icon: 'Code',
+  },
+]
