@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: "João Pedro Rybarczyk's Portfolio",
   description: 'Portfolio of a Computer Engineering student, technology and innovation enthusiast.',
   icons: {
-    icon: '/favicon2.ico',
+    icon: 'https://i.imgur.com/iZJfspc.png',
   },
 };
 
