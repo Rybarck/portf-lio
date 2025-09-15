@@ -28,6 +28,14 @@ export const PROJECTS = [
     image: '1',
     link: '#',
   },
+  {
+    id: 'project-2',
+    title: 'Bookly',
+    description: 'Bookly provides an online scheduling page fully integrated with Google Calendar in real time, ensuring practicality and organization. The entire system was developed entirely with vibe code technologies, combining modernity and efficiency in every detail.',
+    tech: ['Google Calendar', 'Next.js', 'Vibe Code'],
+    image: '2',
+    link: '#',
+  },
 ];
 
 export const SKILLS = [

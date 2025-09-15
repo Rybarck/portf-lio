@@ -25,7 +25,7 @@ export default function ProjectsSection() {
           </SectionDescription>
         </div>
       </div>
-      <div className="mx-auto flex justify-center gap-8 py-12">
+      <div className="mx-auto flex flex-wrap justify-center gap-8 py-12">
         {PROJECTS.map((project) => {
           const placeholder = PlaceHolderImages.find(p => p.id === project.image);
           return (

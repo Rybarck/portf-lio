@@ -11,6 +11,12 @@
       "description": "Screenshot of the portfolio website project",
       "imageUrl": "https://i.imgur.com/h5UAJ6P.png",
       "imageHint": "website screenshot"
+    },
+    {
+      "id": "2",
+      "description": "Screenshot of the Bookly project",
+      "imageUrl": "https://picsum.photos/seed/bookly/600/400",
+      "imageHint": "scheduling app"
     }
   ]
 }
