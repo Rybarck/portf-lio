@@ -4,7 +4,6 @@ import { useState } from 'react';
 import Header from '@/components/header';
 import HeroSection from '@/components/sections/hero';
 import AboutSection from '@/components/sections/about';
-import ExperienceSection from '@/components/sections/experience';
 import ProjectsSection from '@/components/sections/projects';
 import ContactSection from '@/components/sections/contact';
 import Footer from '@/components/footer';
@@ -21,7 +20,6 @@ export default function Home() {
         <HeroSection onAnimationComplete={() => setIsTitleAnimationComplete(true)} />
         <div className={cn('transition-opacity duration-[2000ms] ease-in', isTitleAnimationComplete ? 'opacity-100' : 'opacity-0')}>
             <AboutSection />
-            <ExperienceSection />
             <SkillsSection />
             <ProjectsSection />
             <ContactSection />
