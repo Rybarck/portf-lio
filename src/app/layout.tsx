@@ -6,6 +6,9 @@ import { ThemeProvider } from '@/components/theme-provider';
 export const metadata: Metadata = {
   title: "João Pedro Rybarczyk's Portfolio",
   description: 'Portfolio of a Computer Engineering student, technology and innovation enthusiast.',
+  icons: {
+    icon: '/favicon2.ico',
+  },
 };
 
 export default function RootLayout({
