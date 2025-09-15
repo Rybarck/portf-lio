@@ -38,26 +38,30 @@ export default function Header({ isTitleAnimationComplete }: HeaderProps) {
         )}
       >
         <div className="container mx-auto flex h-16 items-center justify-between px-4 md:px-6">
-          <Link href="#hero" className="mr-4">
+          <Link href="#hero" className="mr-4 flex-shrink-0">
             <Logo />
           </Link>
-          <nav className="hidden items-center gap-6 md:flex">
-            {navLinks.map((link) => (
-              <a
-                key={link.name}
-                href={link.href}
-                className="relative text-sm font-medium after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-primary after:transition-all after:duration-300 hover:after:w-full"
-              >
-                {link.name}
-              </a>
-            ))}
-            <Button asChild variant="outline" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground">
-              <a href="#contact">
-                Contact
-              </a>
-            </Button>
+          <div className="flex-grow flex justify-center">
+            <nav className="hidden items-center gap-6 md:flex">
+              {navLinks.map((link) => (
+                <a
+                  key={link.name}
+                  href={link.href}
+                  className="relative text-sm font-medium after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-primary after:transition-all after:duration-300 hover:after:w-full"
+                >
+                  {link.name}
+                </a>
+              ))}
+              <Button asChild variant="outline" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground">
+                <a href="#contact">
+                  Contact
+                </a>
+              </Button>
+            </nav>
+          </div>
+          <div className="hidden md:flex items-center gap-2 flex-shrink-0">
             <ThemeToggle />
-          </nav>
+          </div>
           <div className="md:hidden flex items-center gap-2">
              <ThemeToggle />
             <Button onClick={toggleMobileMenu} variant="ghost" size="icon">
