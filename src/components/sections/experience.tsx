@@ -24,7 +24,7 @@ export default function ExperienceSection() {
       </div>
       <div className="mx-auto grid max-w-4xl gap-8 py-12 lg:grid-cols-1">
         {EXPERIENCES.map((exp, index) => (
-          <Card key={index} className="transition-all hover:shadow-lg hover:shadow-primary/20 bg-neutral-100 dark:bg-neutral-950">
+          <Card key={index} className="transition-all hover:shadow-lg hover:shadow-primary/20 bg-neutral-100 dark:bg-neutral-950 border-0">
             <CardHeader>
               <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
                 <CardTitle className="text-xl">{exp.title}</CardTitle>
