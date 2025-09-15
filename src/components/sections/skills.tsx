@@ -1,3 +1,5 @@
+'use client';
+
 import SectionWrapper from '@/components/section-wrapper';
 import { Card, CardHeader, CardTitle } from '@/components/ui/card';
 import { SKILLS } from '@/lib/data';
@@ -39,7 +41,7 @@ export default function SkillsSection() {
         {SKILLS.map((skill, index) => {
           const Icon = iconMap[skill.title];
           return (
-            <Card key={index} className="transition-all duration-300 ease-in-out hover:shadow-lg hover:shadow-primary/20 hover:-translate-y-2 bg-secondary border-border">
+            <Card key={index} className="transition-all duration-300 ease-in-out hover:shadow-lg hover:shadow-primary/20 hover:-translate-y-2 bg-neutral-100 dark:bg-neutral-950 border-border">
               <CardHeader className="flex flex-col items-center justify-center text-center p-6">
                 {Icon && <Icon className="h-10 w-10 mb-4 text-primary" />}
                 <CardTitle className="text-lg font-medium">{skill.title}</CardTitle>

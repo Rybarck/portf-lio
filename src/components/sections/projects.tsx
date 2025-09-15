@@ -1,3 +1,5 @@
+'use client';
+
 import SectionWrapper from '@/components/section-wrapper';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -29,7 +31,7 @@ export default function ProjectsSection() {
         {PROJECTS.map((project) => {
           const placeholder = PlaceHolderImages.find(p => p.id === project.image);
           return (
-            <Card key={project.id} className="group overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-primary/20 bg-secondary border-border hover:border-primary max-w-sm">
+            <Card key={project.id} className="group overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-primary/20 bg-neutral-100 dark:bg-neutral-950 border-border hover:border-primary max-w-sm">
               <a href={project.link} target="_blank" rel="noopener noreferrer" className="block h-full">
                 <div className="flex flex-col h-full">
                   <CardHeader className="p-0 relative">

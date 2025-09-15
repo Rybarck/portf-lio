@@ -1,3 +1,5 @@
+'use client';
+
 import SectionWrapper from '@/components/section-wrapper';
 import ContactForm from '@/components/contact-form';
 import { Mail } from 'lucide-react';
@@ -25,7 +27,7 @@ export default function ContactSection() {
       </div>
       <div className="mx-auto mt-12 max-w-xl">
         <div className="space-y-8">
-          <Card className="bg-secondary p-6 md:p-8">
+          <Card className="bg-neutral-100 dark:bg-neutral-950 p-6 md:p-8">
             <ContactForm />
           </Card>
           <div className="flex flex-col items-center space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4">
